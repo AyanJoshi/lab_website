@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayan Joshi - AIMS Lab</title>
+  <meta name="description" content="Ayan Joshi - M.S. Student and Graduate Research Assistant at AIMS Lab, University of Louisville">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="images/favicon.ico">
+  <style>
+    .profile-header {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+    .profile-info h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
+    .profile-info .title {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+    .profile-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .profile-links a {
+      padding: 8px 16px;
+      background: rgba(173, 0, 0, 0.08);
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .profile-links a:hover {
+      background: var(--primary);
+      color: white;
+    }
+    .profile-section {
+      margin-top: 40px;
+    }
+    .profile-section h2 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+    .profile-section ul {
+      margin-left: 20px;
+    }
+    .profile-section li {
+      margin-bottom: 8px;
+    }
+    .project-item {
+      background: var(--bg-alt);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: var(--shadow);
+    }
+    .project-item h3 {
+      color: var(--secondary);
+      margin-bottom: 8px;
+    }
+    .project-item p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .profile-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/aimslab_logo.png" alt="AIMS Lab">
+      <span>AIMS Lab</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="people.html" class="active">People</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="container">
+    <div class="profile-header">
+      <img src="images/ayan_joshi.jpg" alt="Ayan Joshi" class="profile-photo">
+      <div class="profile-info">
+        <h1>Ayan Joshi</h1>
+        <p class="title">M.S. Student, Computer Science<br>Graduate Research Assistant<br>University of Louisville</p>
+        <div class="profile-links">
+          <a href="mailto:ayan.joshi23@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/ayanjoshi/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AyanJoshi" target="_blank">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=tr6YcaQAAAAJ" target="_blank">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <h2>About</h2>
+      <p>Research-focused Master's student investigating how autonomous systems fail under adversarial and uncertain conditions across the hardware-software-physical stack. Demonstrated expertise in robotic fleet security (Rowhammer memory attacks), acoustic side-channel vulnerabilities in collaborative robotics, and bridging the Sim-to-Real gap via Mixed Reality. Active reviewer for IEEE Robotics and Automation Letters (RA-L).</p>
+    </div>
+
+    <div class="profile-section">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Acoustic Side-Channel Attacks in Collaborative Robotics</li>
+        <li>Robotic Fleet Security & Hardware-level Vulnerabilities</li>
+        <li>Sim-to-Real Gap & Mixed Reality for Robot Training</li>
+        <li>Autonomous Systems Security</li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2>Current Research Projects</h2>
+
+      <div class="project-item">
+        <h3>Acoustic Side Channel Attack in Collaborative Robotics (Master's Thesis)</h3>
+        <p>Designing an attack framework that exploits acoustic emissions from collaborative robot arms (Franka Emika Panda) to infer proprietary motion trajectories and operational states. Developing signal processing pipeline using spectral analysis and machine learning classifiers.</p>
+      </div>
+
+      <div class="project-item">
+        <h3>Inverse Mixed Reality (IMRAI) - NSF I-Corps</h3>
+        <p>Developed AR application system (Unity/C#) for Magic Leap 2 to enable safe robot training by overlaying virtual hazards onto physical environments. Engineered UDP networking layer streaming motion-capture data at 90Hz into AR.</p>
+      </div>
+
+      <div class="project-item">
+        <h3>Robotic Fleet Security - "Phantom of the Warehouse"</h3>
+        <p>Co-designed a hardware-level memory corruption attack targeting autonomous mobile robot (AMR) fleets. Executed KSM-enabled Rowhammer attack on ROS Parameter Server, inducing targeted bit-flips in kinematic configuration files.</p>
+      </div>
+
+      <div class="project-item">
+        <h3>SDR-Enabled Wireless Digital Twin (AFRL University Challenge)</h3>
+        <p>Building a Spatiotemporal Wireless Digital Twin for mobile autonomous systems using USRP B210 SDRs and NVIDIA Jetson Orin. Implementing ML-driven channel prediction models integrated into ROS/Gazebo.</p>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <h2>Publications</h2>
+      <ul>
+        <li><strong>Large Language Models in the IoT Ecosystem -- A Survey on Security Challenges and Applications</strong><br>
+        K Khatiwada, J Hopper, J Cheatham, <u>A Joshi</u>, S Baidya<br>
+        <em>arXiv preprint arXiv:2505.17586, 2025</em></li>
+
+        <li><strong>Acoustic Side Channel Attack in Collaborative Robotics</strong><br>
+        <u>A Joshi</u>, A Jaikumar, S Jain, S Baidya<br>
+        <em>In preparation for IEEE/RSJ IROS 2026</em></li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>M.S. Computer Science</strong> - University of Louisville (Expected May 2026) - GPA: 3.95/4.0</li>
+        <li><strong>B.S. Computer Science</strong> - Arizona State University (March 2024) - GPA: 3.7/4.0</li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li><strong>Selected Team (Cardinal SDR)</strong> - 2025-26 AFRL SDR University Challenge (Oct 2025)</li>
+        <li><strong>3rd Place Winner</strong> - CSE Graduate Research Competition, Master's Category (Nov 2025)</li>
+        <li><strong>LaunchIt Entrepreneurship Bootcamp Completion</strong> - University of Louisville (Nov 2025)</li>
+        <li><strong>Dean's List</strong> - Arizona State University (7 consecutive semesters)</li>
+      </ul>
+    </div>
+
+    <div class="profile-section">
+      <h2>Professional Service</h2>
+      <ul>
+        <li><strong>Reviewer</strong> - IEEE Robotics and Automation Letters (RA-L), 2025</li>
+        <li><strong>Program Committee Member</strong> - ACM SAC 2026 IoT Track</li>
+      </ul>
+    </div>
+
+    <p class="mt-40"><a href="people.html">&larr; Back to Team</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://louisville.edu/" target="_blank">University of Louisville</a>
+      <a href="https://engineering.louisville.edu/" target="_blank">Speed School of Engineering</a>
+      <a href="https://engineering.louisville.edu/academics/departments/computer/" target="_blank">CSE Department</a>
+      <a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">LARRI</a>
+    </div>
+    <p class="footer-info">AIMS Lab - Autonomous Intelligent Mobile Systems Laboratory<br>University of Louisville, Louisville, KY</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
