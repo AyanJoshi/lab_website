@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News - AIMS Lab</title>
+  <meta name="description" content="Latest news and updates from AIMS Lab at University of Louisville.">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/aimslab_logo.png" alt="AIMS Lab">
+      <span>AIMS Lab</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="container">
+    <h1 class="section-title">News & Updates</h1>
+
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">2025</span>
+        <span>Paper "Large Language Models on Small Resource-Constrained Systems: Performance Analysis and Trade-Offs" accepted at SoutheastCon 2025</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2025</span>
+        <span>New survey paper on "Large Language Models in the IoT Ecosystem" published on arXiv</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2024</span>
+        <span>Paper on Lyapunov-Optimized 5G-Sliced Communications presented at IEEE INFOCOM 2024</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2024</span>
+        <span>Research on SLEXNet adaptive inference published in ACM TECS</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2023</span>
+        <span>Paper on Neuro-Adaptive Dynamic Control presented at IEEE ICRA 2023</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2023</span>
+        <span>Research on uncertainty-aware task offloading published in IEEE Transactions on Vehicular Technology</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2022</span>
+        <span>Paper on Digital Twin in Safety-Critical Robotics Applications presented at IEEE IPCCC 2022</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2022</span>
+        <span>Edge-assisted Collaborative Digital Twin research presented at IEEE SECON 2022</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2021</span>
+        <span>AIMS Lab established at LARRI, University of Louisville</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://louisville.edu/" target="_blank">University of Louisville</a>
+      <a href="https://engineering.louisville.edu/" target="_blank">Speed School of Engineering</a>
+      <a href="https://engineering.louisville.edu/academics/departments/computer/" target="_blank">CSE Department</a>
+      <a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">LARRI</a>
+    </div>
+    <p class="footer-info">AIMS Lab - Autonomous Intelligent Mobile Systems Laboratory<br>University of Louisville, Louisville, KY</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

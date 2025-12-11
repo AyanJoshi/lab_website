@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - AIMS Lab</title>
+  <meta name="description" content="Contact information for AIMS Lab at University of Louisville.">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/aimslab_logo.png" alt="AIMS Lab">
+      <span>AIMS Lab</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="container">
+    <h1 class="section-title">Contact Us</h1>
+
+    <div class="about-content">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">Location</h3>
+      <p>AIMS Lab<br>
+      Louisville Automation and Robotics Research Institute (LARRI)<br>
+      University of Louisville<br>
+      Louisville, KY</p>
+
+      <h3 style="color: var(--primary); margin: 30px 0 15px;">Contact</h3>
+      <p><strong>Lab Director:</strong> Dr. Sabur Baidya</p>
+      <p><strong>Email:</strong> <a href="mailto:sabur.baidya@louisville.edu">sabur.baidya@louisville.edu</a></p>
+      <p><strong>Website:</strong> <a href="https://sabur-baidya.com" target="_blank">sabur-baidya.com</a></p>
+
+      <h3 style="color: var(--primary); margin: 30px 0 15px;">Join Our Lab</h3>
+      <p>We are always looking for motivated students to join our research group!</p>
+      <br>
+      <p><strong>Available Positions:</strong></p>
+      <ul style="margin-left: 20px; margin-top: 10px;">
+        <li>Ph.D. Students</li>
+        <li>M.S. Students</li>
+        <li>Undergraduate Researchers</li>
+        <li>Visiting Scholars</li>
+      </ul>
+      <br>
+      <p>If you are interested in our research areas (autonomous systems, edge computing, robotics, wireless communications), please send your CV and a brief statement of interest to Dr. Baidya.</p>
+
+      <h3 style="color: var(--primary); margin: 30px 0 15px;">Links</h3>
+      <ul style="margin-left: 20px;">
+        <li><a href="https://louisville.edu/" target="_blank">University of Louisville</a></li>
+        <li><a href="https://engineering.louisville.edu/" target="_blank">J.B. Speed School of Engineering</a></li>
+        <li><a href="https://engineering.louisville.edu/academics/departments/computer/" target="_blank">CSE Department</a></li>
+        <li><a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">LARRI</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://louisville.edu/" target="_blank">University of Louisville</a>
+      <a href="https://engineering.louisville.edu/" target="_blank">Speed School of Engineering</a>
+      <a href="https://engineering.louisville.edu/academics/departments/computer/" target="_blank">CSE Department</a>
+      <a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">LARRI</a>
+    </div>
+    <p class="footer-info">AIMS Lab - Autonomous Intelligent Mobile Systems Laboratory<br>University of Louisville, Louisville, KY</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,302 +1,133 @@
-<!DOCTYPE HTML>
-<html><head><!-- Website template by freewebsitetemplates.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - AIMS Lab</title>
+  <meta name="description" content="Research projects at AIMS Lab - Autonomous systems, edge computing, UAVs, and more.">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
 
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/aimslab_logo.png" alt="AIMS Lab">
+      <span>AIMS Lab</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
 
-  
-  <meta charset="UTF-8"><title>Research</title>
-  
+<section>
+  <div class="container">
+    <h1 class="section-title">Research</h1>
+    <p class="about-content mb-40">Our research focuses on Computing and Communications in various Internet-of-Things paradigms, with emphasis on autonomous systems, edge computing, and intelligent mobile systems.</p>
 
-  
-  
-  <link rel="stylesheet" href="css/style.css" type="text/css"></head><body>
+    <div class="research-grid">
 
-<a href="gallery.html"><img style="border: 0px solid ; margin-left:-5px;width: 230px;" alt="" src="images/logo_speed_s
-chool.png" align="left" hspace="50" vspace="20"></a>
-<a href="gallery.html"><img style="border: 0px solid ; margin-right:2px;width: 210px;" alt="" src="images/LARRI_logo_2.p
-ng" align="right" hspace="50" vspace="20"></a>
-<div id="header">
-<div>
-<ul id="navigation"><br><br><br>
-  <li style="margin-top: 0px; margin-left:5px; height: 20px;" > <a href="index.html">Home&nbsp;&nbsp;</a> </li>
-  <li style="margin-left:-20px;" > <a href="cv.html">&nbsp;&nbsp;&nbsp;Biography</a> </li>
-  <li class="active"> <a href="research.html" >Research</a> </li>
-  <li style="margin-left:-20px;"> <a href="publication.html">Publications</a> </li>
-  <li> <a href="teaching.html">Teaching</a> </li>
-  <li style="margin-left:-20px;"> <a href="gallery.html">Gallery</a> </li>
-  <li style="margin-left:-20px;"> <a href="aimslab.html" target="_blank">AIMSLab&nbsp;</a> </li>
-  <li style="margin-left:-20px;"> <a href="openings.html">Openings&nbsp;</a> </li>
-</ul>
-</div>
-</div>
-<br>
+      <div class="research-card" id="stip">
+        <img src="images/STIP_Testbed_diagram.png" alt="Collaborative Perception">
+        <div class="research-card-content">
+          <h3>Collaborative Perception over Vehicular Edge Computing</h3>
+          <p>In smart transportation systems, local perception based on one vehicle's sensor data may not yield high accurate global perception. Multi-sensor fusion can greatly improve vehicular perception through collaborative computations with edge servers. We develop efficient task partitioning algorithms and real-time multi-sensor fusion at the edge to improve collaborative vision accuracy.</p>
+          <p><strong>Collaborators:</strong> Samuel Thornton (UCSD), Yujen Ku (UCSD), Sujit Dey (UCSD)</p>
+        </div>
+      </div>
 
-<div id="contents">
-<h1 align="center">Ongoing Research Projects</h1>
-<p>My current reserach focuses on Computing and Communications in
-various Internet-of-Things paradigms. My
-recent research efforts are described into the following themes: </p>
-<h3>Collaborative Perception over Vehicular Edge Computing for Smart Transportation<br>
-</h3>
-<div style="height: 262px;" class="photo"> <br>
-<a href="images/stip_testbed.jpg"><img style="width: 333px; height: 231px;" src="images/stip_testbed.jpg"></a></div>
-<div class="research">
-<p style="text-align: justify;">In smart transportation systems, the
-local perception
-based on one vehicle’s sensor data may not yield high accurate global
-perception and might not benefit the legacy vehicles. Multi-sensor
-fusion can greatly improve the vehicular perception by collaborative
-computations with the help of edge server. However, the V2X
-communication over wireless channel
-can impact due to high mobility and handover, as it may require handing
-over the last state of the computation. We aim to create efficient task
-partitioning algorithm between
-vehicle(s) and road side edge computing nodes and real-time data
-multi-sensor (e.g., multi-cameras, multi-radars) fusion algorithm at
-the edge to improve the accuracy of collaborative vision. We are
-building a prototype <a target="_blank"href="images/STIP_Testbed_diagram.png">testbed</a> containing smart vehicles, small cell
-radios for C-V2X communication and edge computing nodes. In
-collaboration with the cities we
-plan to deploy the distributed testbeds and further develop predictive
-models from collected data for proactive handovers that is resilient to
-computation loss. </p>
-</div>
-<div>
-<p><a target="_blank" href="http://globalstip.ucsd.edu/">STIP Project</a>, <a target="_blank" href="files/DAC_Camera_ready.pdf">DAC 2020</a>, <a target="_blank" href="files/STIP_demo.mp4">STIP_Demo</a>&nbsp;&nbsp;
-&nbsp;</p>
-<p>Collaborators: Samuel Thornton (UCSD), Yujen Ku (UCSD), Sujit Dey (UCSD) </p>
-</div>
+      <div class="research-card" id="aiss">
+        <img src="images/architecture_netselect_color.png" alt="Design Space Exploration">
+        <div class="research-card-content">
+          <h3>Design Space Exploration for ML Applications</h3>
+          <p>For complex computing-intensive AI tasks, system performance needs joint evaluation. We conduct design-space exploration for software-hardware co-design of application-driven adaptive computing systems, optimizing power, area, and speed while maintaining high accuracy and low latency.</p>
+          <p><strong>Collaborators:</strong> Sujit Dey (UCSD), Anand Raghunathan (Purdue)</p>
+        </div>
+      </div>
 
-<h3>Design Space Exploration for Machine Learning Applications on Embedded Systems<br>
-</h3>
-<div style="height: 262px;" class="photo"> <br>
-<a href="files/AISS_arch.png"><img style="width: 333px; height: 231px;" src="files/AISS_arch.png"></a></div>
-<div class="research">
-<p style="text-align: justify;">
-In complex computing-intensive tasks for AI-driven systems, the performance of the application and system needs to be jointly evaluated. In order to optimize the power, area and speed of the systems along with high accuracy and low latency of the applications, e.g. deep learning algorithms, we need to decompose the complex algorithms into domain specific functions (DSF). The granularity of the DSFs depends on the interoperability of the functions on different devices as well as their reusability in different machine learning algorithms. The DSFs are needed to be profiled on different systems to understand the best device for a specific DSF and algorithm. Once the DSFs are defined and profiled, we will need to formulate multi-objective optimization problems based on performance of different components on different software and hardware platforms, e.g., CPU, GPU and accelerators. We are working on this project to conduct a design-space exploration for software-hardware co-design for an application-driven adaptive and efficient computing systems.
+      <div class="research-card" id="hydra">
+        <img src="images/uav_edge_setup.png" alt="UAV Systems">
+        <div class="research-card-content">
+          <h3>Resilient Computation for UAV Systems</h3>
+          <p>The ability to execute complex signal processing and ML tasks in real-time is core to autonomy. We develop "Hydra", an architecture for flexible sensing-analysis-control pipelines over autonomous airborne systems, introducing the concept of information autonomy for edge-assisted UAV applications.</p>
+          <p><strong>Collaborators:</strong> Marco Levorato (UCI)</p>
+        </div>
+      </div>
 
-</p>
-</div>
-<div>
-<p><a target="_blank" href="http://globalstip.ucsd.edu_1/">AISS Project</a>
-&nbsp;</p>
-<p>Collaborators: Sujit Dey (UCSD), Anand Raghunathan (Purdue University) </p>
-</div>
+      <div class="research-card" id="re">
+        <img src="images/iot_figure1.png" alt="Renewable Energy">
+        <div class="research-card-content">
+          <h3>Renewable Energy-driven Vehicular Edge Computing</h3>
+          <p>We create machine learning models to predict small cell operation time based on communication traffic, computing demand, and environmental factors, maximizing renewable energy utilization in vehicular edge computing systems.</p>
+        </div>
+      </div>
 
+      <div class="research-card" id="uav">
+        <img src="images/UAV_comm.png" alt="UAV Communications">
+        <div class="research-card-content">
+          <h3>Robust UAV Communications</h3>
+          <p>We design a robust multi-path communication framework for UAV systems, featuring a fully open-sourced integrated UAV-network simulator called "FlyNestSim" for testing and validation.</p>
+        </div>
+      </div>
 
-<h3>Resilient Computation for Heterogeneous Autonomous Drone Systems<br>
-</h3>
-<div class="photo"> <a href="images/uav_computation.png"><img style="width: 341px; height: 299px;" src="images/uav_computation.png"></a> </div>
-<div class="research">
-<p style="text-align: justify; height: 299px;">The ability to execute
-complex signal
-processing and machine learning tasks in real-time is the core of
-autonomy. In airborne devices such as Unmanned Aerial Vehicles (UAV),
-the hardware limitations imposed by the weight constraint make the
-continuous execution of these algorithms challenging. Edge and fog
-computing can mitigate such limitations and boost the system and
-mission-level performance of the UAVs. However, due to the UAVs motion
-characteristics and complex dynamics of urban environments, the
-performance of pipelines using interconnected, rather than onboard,
-resources can quickly degrade. We are designing and building a system
-called "Hydra", an architecture for the establishment of flexible
-sensing-analysis-controlpipelines over autonomous airborne systems. We
-introduce the concept of information autonomy to extend autonomy to
-encompass how&nbsp; information-related&nbsp; tasks&nbsp; are&nbsp;
-handled&nbsp; in&nbsp; this&nbsp; challenging&nbsp; scenarios.&nbsp; We
-motivate the need for “Information Autonomy” based on&nbsp; our&nbsp;
-observations&nbsp; from&nbsp; real-world&nbsp; experiments&nbsp; and
-build a&nbsp; self-adaptive&nbsp; framework&nbsp; for&nbsp;
-edge-assisted&nbsp; UAV&nbsp; applications.<br>
-</p>
-</div>
-<div>
-<p>
-<a target="_blank" href="files/ICC_2020.pdf">ICC 2020</a>, 
-<a target="_blank" href="https://iasl.ics.uci.edu/pub/matsubara-baidya-2019-mobicom.pdf">Mobicom
-HotEdgeVideo 2019</a>,
-<a target="_blank" href="https://iasl.ics.uci.edu/pub/callegaro-baidya-2019-milcom.pdf">MILCOM
-2019</a>,&nbsp;<a target="_blank" href="https://iasl.ics.uci.edu/pub/callegaro-sbaidya-2019-magesys.pdf">Sigcomm
-MAGESys 2019</a>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </p>
-<p>Collaborators: Davide Callegaro (UCI), Yoshitomo Matsubara (UCI),
-Marco Levorato (UCI), Gowri Ramachandran (USC), Bhaskar Krishnamachari
-(USC)<br>
-</p>
-</div>
-<h3>Renewable Energy-driven Resource-efficient Vehicular Edge Computing<br>
-</h3>
-<div style="height: 266px;" class="photo">
-<br>
-<div style="height: 255px;" class="photo"><a href="images/re_testbed.jpg"><img style="width: 346px; height: 239px;" src="images/re_testbed.jpg"></a></div>
-<br>
-</div>
-<div class="research">
-<p style="text-align: justify;">Since base stations (BSs) consume 80%
-of the total power in cellular
-networks, the need to reduce the power consumption of the BSs is
-crucial for energy-efficient cellular networks. Renewable energy (RE)
-is a promising solution to reduce grid energy consumption and carbon
-emissions of BSs. However, the benefit of utilizing Renewable Energy
-(RE) is limited by its highly intermittent and unreliable nature,
-resulting in low savings in grid energy. Our objective is to maximize
-utilization of harvested RE at the BSs with minimal use of energy
-storage (battery), thereby enabling the use of renewable energy
-feasible at low-cost. With the RE-powered Small Cell (SC) testbed, we
-aim at developing a machine learning model to predict the remaining
-operation time of a small cell based on the current system and demand
-status. The feature set includes historical communication traffic,
-computing demand, solar and wind energy generation profile,
-environmental factors such as temperature and humidity. <br>
-</p>
-</div>
-<p> <a target="_blank" href="http://mesdat.ucsd.edu/projects/green-communications/sustainable-wireless-communications-optimal-utilization-renewable">Project</a>,&nbsp;<a href="http://mesdat.ucsd.edu/sites/esdat.ucsd.edu/files/publications/1570663518%20-%20camera%20ready.pdf" target="blank">IGESSC</a> </p>
-<p>Collaborators: Yujen Ku (UCSD), Sujit Dey (UCSD)<br>
-</p>
-<hr>
-<p><br>
-<br>
-</p>
-<h1 align="center">Past Research Projects</h1>
-<h3> Robust Communications for Unmanned Aerial Vehicles (UAV)<br>
-</h3>
-<div style="height: 255px;" class="photo">
-<br>
-<div style="height: 255px;" class="photo"><a href="images/UAV_comm.png"><img style="border: 0px solid ; width: 342px; height: 236px;" alt="Resilient UAV Communication" src="images/UAV_comm.png"></a></div>
-<br>
-</div>
-<p style="margin-left: 355px; width: 645px; text-align: justify;">Unmanned
-Aerial Vehicle (UAV) systems are being increasingly used in a broad
-range of scenarios and applications. However, their deployment in urban
-areas poses important technical challenges in communications between
-the ground&nbsp; stations and the UAVs in a highly dynamic and crowded
-spectrum. Indeed, competing data streams may create local or temporary
-congestion impairing the ground stations to control the UAVs. We
-design&nbsp; a robust multi-path communication framework for&nbsp; UAV
-systems.&nbsp; The framework continuously probes the performance of
-multiple wireless multi-hop paths from the ground stations to each UAV,
-and dynamically selects the path providing the best performance to
-support timely control. Based on a real-world implementation and
-extensive field experimentation with 3DR Solo drone, we demonstrate the
-ability of the proposed framework to provide robust control against
-exogenous interference and network congestion. We also created a fully
-open-sourced intergrated UAV-network simulator called "FlyNestSim" to
-simulate wide range of UAV communication scenarios.<br>
-</p>
-<p> </p>
-<p> <a target="_blank" href="https://arxiv.org/pdf/1907.10689.pdf">DCOSS 2020</a>, <a target="_blank" href="https://iasl.ics.uci.edu/pub/shaikh-baidya-2018-cpcuav.pdf">SECON
-CPC-UAV 2018</a>, <a target="_blank" href="https://iasl.ics.uci.edu/pub/baidya-shaikh-2018-mswim.pdf">MSWiM
-2018</a>, <a target="_blank" href="https://github.com/saburhb/FlyNetSim"> FlyNetSim Code </a>&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-<p>Collaborators : Zoheb Shaikh (UCI), Marco Levorato (UCI)</p>
-<p> </p>
-<h3>Software-Defined Real-time Edge Computing using Network Function
-Virtualization (NFV)<br>
-</h3>
-<div style="height: 255px;" class="photo">
-<br>
-<div style="height: 255px;" class="photo"><a href="images/clone-n-cast_project2.png"><span style="text-decoration: underline;"><img style="border: 0px solid ; width: 343px; height: 229px;" alt="eBPF architecture" src="images/clone-n-cast_project2.png"></span></a></div>
-<br>
-</div>
-<p style="margin-left: 356px; width: 644px; text-align: justify; height: 260px;">By
-placing computation resources within one-hop wireless topology, the
-recent edge computing paradigm is a keyenabler of real-time
-Internet of Things (IoT) applications. In the context of IoT scenarios
-where the same information from a sensor is used by multiple
-applications at different locations, the data stream needs to be
-replicated. However, the transportation of parallel streams might not
-be feasible due to limitations in the capacity of the network
-transporting the data. To address&nbsp; this issue, a content and
-computation-aware communication control framework is proposed based on
-the&nbsp; Software Defined Network(SDN) paradigm. The framework
-supports multi-streaming using the extended Berkeley Packet Filter
-(eBPF), where the traffic flow and packet replication for each&nbsp;
-specific computation process is controlled by a program running inside
-an in-kernel Virtual Machine (VM). This reduces the amount of data to
-be forwarded in the higher layer, and minimizes the socket buffer
-allocation; thus, saving both system resources and latency. </p>
-<p> <a target="_blank" href="https://iasl.ics.uci.edu/pub/baidya-chen-2018-infocom.pdf">INFOCOM
-SCAN 2018</a>, <a target="_blank" href="https://iasl.ics.uci.edu/pub/baidya-levorato-2017-infocom.pdf">INFOCOM
-SCAN 2017</a>,&nbsp; <a target="_blank" href="https://github.com/saburhb/eBPF-cast">eBPF-cast Code </a> </p>
-<p>Collaborators : Yan Chen (Huawei Research Lab, CA), Marco Levorato
-(UCI) </p>
-<h3>Content-aware Cognitive Interference Control for Urban IoT Systems<br>
-</h3>
-<div style="height: 255px;" class="photo">
-<br>
-<div style="height: 255px;" class="photo"><a href="images/cog_interf_control.png"><img style="border: 0px solid ; width: 346px; height: 239px;" alt="" src="images/cog_interf_control.png"></a></div>
-<br>
-</div>
-<p style="margin-left: 353px; width: 647px; height: 269px; text-align: justify;">We
-propose a novel cognitive interference control framework for
-heterogeneous local access networks supporting computingand data
-processing in urban Internet of Things (IoT) systems. The notion of
-cognitive content-aware interference control is introduced, where the
-transmission pattern of cognitive nodes is dynamically adapted to the
-state of “protected” IoT data streams. The state describes the
-performance degradation that interference would cause to algorithms
-processing the data if the cognitive nodes chose to transmit in the
-corresponding time period. The framework is instantiated for a
-case-study scenario, where device-to-device (D2D) and long-term
-evolution communications coexist on the same channel resource. A
-city-monitoring application is considered, where the state captures the
-type of frames within a multimedia video stream processed at the edge
-of the network to detect and track objects. The proposed transmission
-strategy significantly increase throughput of local D2D communications
-for a target accuracy of the monitoring application.&nbsp;<br>
-</p>
-<p> <a target="_blank" href="https://iasl.ics.uci.edu/pub/baidya-levorato-2018-tccn.pdf">IEEE
-TCCN 2018</a>, <a target="_blank" href="https://iasl.ics.uci.edu/pub/chowdhery-levorato-2018-fogiot.pdf">Springer
-2018</a>,&nbsp; <a target="_blank" href="https://iasl.ics.uci.edu/pub/baidya-levorato-2017-icnc.pdf">ICNC
-2017,</a>&nbsp;<a target="_blank" href="https://iasl.ics.uci.edu/pub/baidya-levorato-2016-globecom.pdf">
-Globecom 2016</a> &nbsp; &nbsp;
-&nbsp; &nbsp;&nbsp; </p>
-<p>Collaborator : Marco Levorato (UCI) </p>
-<h3>Adaptive Communications over Multipath and Multi-Networks <br>
-</h3>
-<div style="height: 255px;" class="photo">
-<br>
-<div style="height: 255px;" class="photo"><a href="images/mptcp_project1.png"><img src="images/mptcp_project1.png" alt="spie" style="border: 0px solid ; width: 343px; height: 220px;"></a></div>
-<br>
-</div>
-<p style="margin-left: 357px; width: 643px; text-align: justify; height: 263px;">Multipath
-Communications is one of the key enabler to improve the data throughput
-and hence the performance of the applications. If multiple paths are
-used simultaneously, e.g., Multipath TCP (MPTCP), the assymetry in the
-quality of different paths can cause out-of-order packets and hence the
-buffer boat problem which affects the latency and jitter of the
-application. We propose slow-path adaptation technique that monitors
-quality of all the available paths, and based on threshold decides to
-selectively retransmit delayed packets over faster path while reducing
-the transmission rate on the slow-path to the minimum until its quality
-improves. It improves the MPTCP performance in high asymmetric
-conditions and never falls below achievable TCP level throughput. In
-case of complex and real-time applications, selecting the best path can
-yields better result. By incorporating data-driven prediction
-mechanism, we select the best available paths dynamically for real-time
-applications without any significant affect on the monitored paths. <br>
-</p>
-<p> 
-<a target="_blank" href="https://arxiv.org/pdf/2004.01300.pdf">ICC EML5G 2020</a>, 
-<a target="_blank" href="https://drive.google.com/file/d/1wzdZfvnUs28PWh5kgpMC1Mb4Fzl8tAc4/view?usp=sharing">IEEE
-ICC 2014</a>, <a target="_blank" href="https://arxiv.org/pdf/2007.00313.pdf">
-UTD-CS 2013</a>&nbsp;
-&nbsp; &nbsp;&nbsp; <br>
-</p>
-<p>Collaborators : Peyman Tehrani (UCI), Marco Levorato (UCI), Promod
-Shirol (UT Dallas), Abhishek
-Basu (UT Dallas), Dr. Ravi Prakash (UT Dallas) </p>
-</div>
+      <div class="research-card" id="sdn">
+        <img src="images/netselect_project.png" alt="Software-Defined Edge Computing">
+        <div class="research-card-content">
+          <h3>Software-Defined Edge Computing</h3>
+          <p>We develop a content and computation-aware communication control framework based on SDN paradigm, using extended Berkeley Packet Filter (eBPF) for efficient multi-streaming in edge computing environments.</p>
+        </div>
+      </div>
 
-<div id="footer">
-<div class="clearfix">
-<table width="100%">
-  <tbody>
-    <tr>
-      <td align="right"><a href="http://www.ucsd.edu/"><img src="images/uofl_logo.png" width="200"></a></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
+      <div class="research-card" id="cognitive">
+        <img src="images/cog_interf_control.png" alt="Cognitive Interference Control">
+        <div class="research-card-content">
+          <h3>Cognitive Interference Control</h3>
+          <p>We create a cognitive interference control framework for heterogeneous local access networks in urban IoT systems, optimizing transmission patterns for improved throughput and accuracy.</p>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</section>
 
-</body></html>
+<section>
+  <div class="container">
+    <h2 class="section-title">Research Areas Overview</h2>
+    <div style="text-align: center; margin-top: 30px;">
+      <img src="images/wordcloud4.jpg" alt="Research Areas Word Cloud" style="max-width: 600px; width: 100%; border-radius: 10px;">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://louisville.edu/" target="_blank">University of Louisville</a>
+      <a href="https://engineering.louisville.edu/" target="_blank">Speed School of Engineering</a>
+      <a href="https://engineering.louisville.edu/academics/departments/computer/" target="_blank">CSE Department</a>
+      <a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">LARRI</a>
+    </div>
+    <p class="footer-info">AIMS Lab - Autonomous Intelligent Mobile Systems Laboratory<br>University of Louisville, Louisville, KY</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
