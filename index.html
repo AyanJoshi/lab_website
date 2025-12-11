@@ -1,254 +1,190 @@
-<!DOCTYPE HTML>
-<html><head><!-- Website template by freewebsitetemplates.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIMS Lab - Autonomous Intelligent Mobile Systems Laboratory</title>
+  <meta name="description" content="AIMS Lab at University of Louisville - Research in autonomous systems, robotics, edge computing, and intelligent mobile systems.">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
 
+<header>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="images/aimslab_logo.png" alt="AIMS Lab">
+      <span>AIMS Lab</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
 
-  
-  <meta charset="UTF-8"><title>Sabur Baidya, University of Louisville</title>
-  
+<section class="hero">
+  <div class="hero-content">
+    <img src="images/aimslab_logo1.png" alt="AIMS Lab Logo">
+    <h1>Autonomous Intelligent Mobile Systems Laboratory</h1>
+    <p>Advancing research in autonomous systems, robotics, edge computing, and intelligent mobile systems at the University of Louisville</p>
+  </div>
+</section>
 
-  
-  
-  <link rel="stylesheet" href="css/style.css" type="text/css"></head><body>
-<a href="gallery.html"><img style="border: 0px solid ; margin-left:-5px;width: 230px;" alt="" src="images/logo_speed_s
-chool.png" align="left" hspace="50" vspace="20"></a>
-<a href="gallery.html"><img style="border: 0px solid ; margin-right:2px;width: 210px;" alt="" src="images/LARRI_logo_2.p
-ng" align="right" hspace="50" vspace="20"></a>
-<div id="header">
-<div>
-<ul id="navigation"><br><br><br>
-  <li style="margin-top: 0px; margin-left:5px; height: 20px;" class="active"> <a href="index.html">Home&nbsp;&nbsp;</a> </li>
-  <li style="margin-left:-20px;"> <a href="cv.html">&nbsp;&nbsp;&nbsp;Biography</a> </li>
-  <li> <a href="research.html">Research</a> </li>
-  <li style="margin-left:-20px;"> <a href="publication.html">Publications</a> </li>
-  <li> <a href="teaching.html">Teaching</a> </li>
-  <li style="margin-left:-20px;"> <a href="gallery.html">Gallery</a> </li>
-  <li style="margin-left:-20px;"> <a href="aimslab.html" target="_blank">AIMSLab&nbsp;</a> </li>
-  <li style="margin-left:-20px;"> <a href="openings.html">Openings&nbsp;</a> </li>
-</ul>
-</div>
-</div>
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <div class="about-content">
+      <p>The Autonomous Intelligent Mobile Systems Laboratory (AIMS Lab) was established in 2021 as one of the major labs at the Louisville Automation and Robotics Research Institute (LARRI) at the University of Louisville.</p>
+      <br>
+      <p>AIMS Lab conducts advanced studies and development of autonomous and intelligent systems including unmanned aerial vehicles, ground rovers, connected and autonomous vehicles, industrial robotic arms, metaverse applications, and wireless/mobile innovations. Our research integrates novel sensing and intelligent decision-making in collaborative robotics using AI and adaptive sensing, along with multi-level edge and cloud computing.</p>
+      <br>
+      <p>We provide an open, inclusive, and collaborative environment, embracing researchers from diverse backgrounds. Our cutting-edge facility is equipped with mobile robots, sensors, systems, and tools, and connects with several other labs at LARRI for interdisciplinary collaboration.</p>
+    </div>
 
-<br>
-<div id="contents">
-<div style="height: 273px;" class="photo"> <img src="images/sabur_photo_2021_4.jpeg" width="270"><br>
-</div>
-<div class="info">
-<h1 style="margin-left: -60px; width: 687px; height: 25px;"><b>Sabur
-Baidya &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-&nbsp;&nbsp;&nbsp;</b>&nbsp;
+    <div class="affiliations">
+      <a href="https://louisville.edu/" target="_blank">
+        <img src="images/uofl_logo.png" alt="University of Louisville">
+      </a>
+      <a href="https://engineering.louisville.edu/" target="_blank">
+        <img src="images/logo_speed_school.png" alt="Speed School of Engineering">
+      </a>
+      <a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">
+        <img src="images/LARRI_logo_2.png" alt="LARRI">
+      </a>
+    </div>
+  </div>
+</section>
 
-<iframe style="position: relative; margin-left: 300px; margin-top: -35px; width: 450px; height: 370px;"   src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=www.flickr.com/photos/saburhb/albums/72157711823105297&sort=0&by=album&theme=slider&scale=fill&speed=4000&limit=20&skin=default&autoplay=true" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe><script type="text/javascript">function showpics(){var a=$("#box").val();$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags="+a+"&tagmode=any&format=json&jsoncallback=?",function(a){$("#images").hide().html(a).fadeIn("fast"),$.each(a.items,function(a,e){$("<img/>").attr("src",e.media.m).appendTo("#images")})})}</script>
+<section id="research-highlights">
+  <div class="container">
+    <h2 class="section-title">Research Areas</h2>
+    <div class="research-grid">
+      <div class="research-card">
+        <img src="images/STIP_Testbed_diagram.png" alt="Collaborative Perception">
+        <div class="research-card-content">
+          <h3>Collaborative Perception over Vehicular Edge Computing</h3>
+          <p>Efficient task partitioning and real-time multi-sensor fusion for smart transportation systems.</p>
+          <a href="research.html#stip">Learn more</a>
+        </div>
+      </div>
+      <div class="research-card">
+        <img src="images/uav_edge_setup.png" alt="UAV Systems">
+        <div class="research-card-content">
+          <h3>Resilient Computation for UAV Systems</h3>
+          <p>Developing "Hydra" architecture for flexible sensing-analysis-control pipelines in autonomous airborne systems.</p>
+          <a href="research.html#hydra">Learn more</a>
+        </div>
+      </div>
+      <div class="research-card">
+        <img src="images/architecture_netselect_color.png" alt="Design Space Exploration">
+        <div class="research-card-content">
+          <h3>Design Space Exploration for ML Applications</h3>
+          <p>Software-hardware co-design for application-driven adaptive computing systems.</p>
+          <a href="research.html#aiss">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-40"><a href="research.html">View all research projects</a></p>
+  </div>
+</section>
 
-    
-&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<b> </b></h1>
+<section id="team-preview">
+  <div class="container">
+    <h2 class="section-title">Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="images/sabur_photo_2021_4.jpeg" alt="Dr. Sabur Baidya">
+        <h4>Dr. Sabur Baidya</h4>
+        <p class="role">Lab Director, Assistant Professor</p>
+        <p class="research">Edge Computing, Robotics, Wireless Networks</p>
+        <div class="links">
+          <a href="https://sabur-baidya.com" target="_blank">Website</a>
+          <a href="mailto:sabur.baidya@louisville.edu">Email</a>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://via.placeholder.com/120" alt="Mohammad Helal Uddin">
+        <h4>Mohammad Helal Uddin</h4>
+        <p class="role">Ph.D. Student</p>
+        <p class="research">Neural Network Compression for CPS</p>
+      </div>
+      <div class="team-card">
+        <img src="https://via.placeholder.com/120" alt="Narges Golmohammadi">
+        <h4>Narges Golmohammadi</h4>
+        <p class="role">Ph.D. Student</p>
+        <p class="research">Next-Gen Wireless Communication in Robotics</p>
+      </div>
+      <div class="team-card">
+        <img src="https://via.placeholder.com/120" alt="Alwin Rajkumar">
+        <h4>Alwin Rajkumar</h4>
+        <p class="role">B.S. Student</p>
+        <p class="research">Deep Multi-task Fusion for UAVs</p>
+      </div>
+    </div>
+    <p class="text-center mt-40"><a href="people.html">View full team</a></p>
+  </div>
+</section>
 
-<p style="margin-left: -60px; margin-top: 20px; height: 42px;"> <a target="blank" href="files/CV_Sabur_Dec_2021.pdf">Curriculum
-Vitae</a> &nbsp;&nbsp;&nbsp;
-<a href="https://scholar.google.com/citations?user=6RWf0kIAAAAJ&hl=en" target="blank" style="text-decoration: none; "><img src="images/google_scholar3.jpg" height="20" > </a> &nbsp;
-<a href="https://www.linkedin.com/in/saburhb" target="blank" style="text-decoration: none;"><img src="images/linkedin.png" height="20"> </a> &nbsp;
-<a href="https://github.com/saburhb" target="blank" style="text-decoration: none;"><img src="images/git.png" height="20"> </a> &nbsp;
-<a href="https://www.researchgate.net/profile/Sabur_Baidya" target="blank" style="text-decoration: none;"><img src="images/researchgate.jpg" height="20"> </a></p>
+<section id="news-preview">
+  <div class="container">
+    <h2 class="section-title">Recent News</h2>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">2025</span>
+        <span>Paper accepted at SoutheastCon 2025: "Large Language Models on Small Resource-Constrained Systems"</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2024</span>
+        <span>New research on Adaptive Computation Partitioning in Edge Computing Systems published</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">2021</span>
+        <span>AIMS Lab established at LARRI, University of Louisville</span>
+      </li>
+    </ul>
+    <p class="text-center mt-20"><a href="news.html">View all news</a></p>
+  </div>
+</section>
 
-<p style="margin-left: -60px; margin-top: 10px; height: 159px;"> Assistant Professor<br>
-<a href="https://engineering.louisville.edu/academics/departments/computer/" target="blank">Computer Science and Engineering Dept.</a><br>
-<a href="https://engineering.louisville.edu/" target="blank">J.B. Speed School of Engineering</a><br>
-<a href="https://louisville.edu/" target="blank">University of Louisville</a><br>
-Email: sabur[dot]baidya[at]louisville.edu<br>
-Lab: LARRI Building<br>
-<br>
-</p>
+<section id="contact-preview">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="about-content">
+      <p><strong>Location:</strong> LARRI Building, University of Louisville</p>
+      <p><strong>Email:</strong> <a href="mailto:sabur.baidya@louisville.edu">sabur.baidya@louisville.edu</a></p>
+      <br>
+      <p>We are always looking for motivated students to join our research group. Check our <a href="openings.html">openings page</a> for available positions.</p>
+    </div>
+  </div>
+</section>
 
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://louisville.edu/" target="_blank">University of Louisville</a>
+      <a href="https://engineering.louisville.edu/" target="_blank">Speed School of Engineering</a>
+      <a href="https://engineering.louisville.edu/academics/departments/computer/" target="_blank">CSE Department</a>
+      <a href="https://engineering.louisville.edu/research/centersinstitutes/larri/" target="_blank">LARRI</a>
+    </div>
+    <p class="footer-info">AIMS Lab - Autonomous Intelligent Mobile Systems Laboratory<br>University of Louisville, Louisville, KY</p>
+  </div>
+</footer>
 
+<script>
+function toggleNav() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
 
-
-
-</div>
-<div>
-
-<p style="color:blue;">
-<br/>
-<b>
-<!--*** I will be joining the <a href="https://engineering.louisville.edu/academics/departments/computer/" target="blank"> Computer Science and Engineering Department</a> at <a href="https://louisville.edu/about/" target="blank">University of Louisville (UofL)</a> as an Assistant Professor in July 2021. I have two funded Ph.D. student positions (starting Fall'21). Please check the details <a href="http://saburbaidya.com/openings.html">here</a> and send your CV and supporting documents to me via <span style="color:brown;">sbaidya@eng.ucsd.edu</span> if you are interested.-->
-</b>
-</p>
-
-<!--<p style="text-align: justify;">I am a Postdoctoral Scholar in the <a href="http://www.ece.ucsd.edu/" target="blank">Electrical
-and Computer Engineering Department</a> at the <a href="http://www.ucsd.edu/" target="blank">University of California, San Diego</a>. I
-am affiliated with the <a href="http://mesdat.ucsd.edu/" target="blank">Mobile Systems
-Design Lab</a> at UCSD.-->
-
-<p style="text-align: justify;">I am an Assistant Professor in the <a href="https://engineering.louisville.edu/academics/departments/computer/" target="blank">Computer Science and Engineering</a> department of <a href="https://engineering.louisville.edu/" target="blank">J.B. Speed School of Engineering</a> at <a href="https://louisville.edu/about/" target="blank">University of Louisville</a>. I am affiliated with the <a href=https://engineering.louisville.edu/research/centersinstitutes/larri/" target="blank"> Louisville Automation and Robotics Research Institute (LARRI)</a> and directing the <a href="http://saburbaidya.com/aimslab.html" target="blank">Autonomous Intelligent Mobile Systems Laboratory (AIMSLab)</a>.
-My research focuses on Intelligent and Autonomous systems in the domain of the Internet-of-Things (IoT) and Robotics, including Unmanned Aerial Vehicles (UAV), Connected and Autonomous Vehicles (CAV), and Tactile Internet based robotic systems. On the technical side, my research employs multimodal sensing, advanced communications (e.g., 5G/6G,mmWave, LTE, C-V2X, M2M) and efficient computing systems and architecture (e.g. Edge/Fog Computing, Device-mapping, Virtualization), developing innovative distributed intelligence using optimizations and AI-driven approaches.
-<!--My work spans the areas of Computing Systems,
-Networking, Edge-Cloud Computing, Computer Vision, Machine Learning and Cyber-physical and
-Autonomous Systems.&nbsp;My recent research directions have been on the
-energy-efficient collaborative computing, and effective task partitioning in resource constrained Autonomous Systems, e.g.,
-Unmanned Aerial Vehicles (UAV), and Connected and Autonomous Vehicles (CAV), using optimal computaion offloading over
-the edge-cloud.&nbsp; I am
-working on architecting flexible, adaptive and reconfigurable
-computing framework with multi-objectve optimizations for advanced AI-based Systems, along with optimal distributed Vehicular Edge Computing
-over hybrid V2X Wireless Networks including 5G mmWave, LTE, C-V2X, WiFi and
-D2D technologies.-->
-</p>
-
-
-<p style="text-align: justify;">Prior to joining UofL, I was a Postdoctoral Scholar in the <a href="http://www.ece.ucsd.edu/" target="b
-lank">Electrical and Computer Engineering Department</a> at the <a href="http://www.ucsd.edu/" target="blank">University of California, San Diego</a>. I was affiliated with the <a href="http://mesdat.ucsd.edu/" target="blank">Mobile Systems Design Lab</a> and the <a href="http://cwc.ucsd.edu/" target="blank"> Center for Wireless Communications</a> at UCSD. I obtained my PhD in Computer Science from <a href="http://www.uci.edu/" target="blank">University of California, Irvine</a> in 2019 and Masters in Computer Science from <a href="http://www.utdallas.edu/" target="blank">University of Texas at Dallas</a> in 2013. In Summer 2012, I was a visiting researcher in the <a href="http://www.winlab.rutgers.edu/" target="blank">WINLAB</a> of <a href="http://www.rutgers.edu/" target="blank">Rutgers University, NJ</a>.&nbsp; I have had research internship experience in Nokia Bell Labs, Huawei Research labs and Blackberry, as well as prior work experience as a software engineer in Cisco Systems and as a systems engineer at IBM.<br>
-</p>
-
-<p style="color:green;"><b>*** I am looking for motivated students to join my research group. For details, check <a href="http://saburbaidya.com/openings.html" target="blank">here</a></b>.</p>
-</div>
-<div class="recent-news">
-<p> </p>
-<h2 style="margin-top: 13px; height: 11px;">&nbsp;</h2>
-<h2>Research Interests<br>
-</h2>
-<ul>
-  <li>Intelligent and Autonomous Systems (UAVs, Connected and Autonomous Vehicles, Tactile Robots), Internet of Things (IoT), Wireless Networks (5G, LTE, C-V2X, WiFi, D2D),
-&nbsp;Distributed Computing (Edge/Cloud), Video Streaming and Processing, AR/VR/MR, Machine Learning, Smart and Connected Health </li>
-</ul>
-<h2><br>
-</h2>
-
-
-<h2>Recent News</h2>
-<ul>
-</ul>
-<ul>
-  <li>09/2021:&nbsp; One paper on sustainable vehicular edge computing is accepted in <a href="https://ieeexplore.ieee.org/abstract/document/9573263" target="_blank">IEEE Transaction on Vehicular Technology</a> 2021</li>
-  <li>07/2021:&nbsp; Joined as a tenure-track assistant professor at the University of Louisville (UofL)</li>
-  <li>06/2021:&nbsp; One collaborative paper got accepted in <a href="https://clustercomp.org/2021/" target="_blank">IEEE CLUSTER</a> 2021</li>
-  <li>05/2021:&nbsp; Our paper on Contention-aware ML in Embedded Systems is accepted in <a href="http://aicas2021.org/" target="_blank">IEEE AICAS</a> Conference 2021</li>
-  <li>02/2021:&nbsp; Two collaborative papers got accepted in <a href="https://acmse.net/2021/" target="_blank">ACM Southeast (ACMSE)</a> Conference 2021</li>
-</ul>
-<br>
-<br>
-
-
-
-<!--<link rel="stylesheet" href="css/style1.css" type="text/css">-->
-
-<style type="text/css"> @import url("css/style1.css"); </style>
-<label for="my_checkbox"><p style="color:blue; font-size:3ex; "><u>News Archive >></u></p></label>
-</div>
-<input type="checkbox" id="my_checkbox" style="display:none;">
-<div id="hidden">
-<!--<p> Test </p>-->
-
-
-
-<!--<h2>Recent News</h2>-->
-
-<ul>
-</ul>
-<ul>
-  <li>11/2020:&nbsp; Our paper on Head Network Distillation for Split DNN is accepted in <a href="https://ieeexplore.ieee.org/document/9265295?source=authoralert" target="_blank">IEEE ACCESS 2020</a> Journal</li>
-  <li>09/2020:&nbsp; Our paper on State of Energy (SoE) Prediction with CNN-LSTM 
-is accepted in <a href="https://site.ieee.org/clas-sysc/call-for-papers/" target="_blank">IEEE IGESSC 2020</a></li>
-  <li>08/2020:&nbsp; Serviing as TPC member for the Graduate Forum of  <a href="https://www.comsnets.org/graduate_f
-orum.html" target="_blank">COMSNETS 2021</a></li>
-  <li>08/2020:&nbsp; Completed <a href="http://saburbaidya.com/files/MicroMBACertificate.pdf" target="_blank"> Micro-MBA </a> at Rady School of Management, UC San Diego </li>
-  <li>06/2020:&nbsp; Invited paper on Computing for Connected and Autonomous Vehicles 
-is accepted in special session of <a href="http://www2.dac.com/events/eventdetails.aspx?id=295-91" target="_blank">DAC 2020</a></li>
-  <li>05/2020:&nbsp; Our paper on Infrastructure Assistance for Autonomous UAVs 
-is accepted in <a href="https://www.dcoss.org/program-schedule.html" target="_blank">DCOSS 2020</a></li>
-  <li>03/2020:&nbsp; Our extended abstract on Distilled-split DNN 
-is accepted in <a href="https://cseweb.ucsd.edu/~jmcauley/workshops/scmls20/#page-top" target="_blank">SOCAL Machine Learning Symposium 2020</a></li>
-  <li>02/2020:&nbsp; Our paper is accepted in <a href="https://icc2020.ieee-icc.org/" target="_blank">IEEE ICC</a> Edge Machine 
-Learning for 5G Mobile Networks and Beyond 2020</li>
-  <li>01/2020:&nbsp; Our paper on Dynamic Distributed Computing for
-Autonomous UAVs is accepted in <a href="https://icc2020.ieee-icc.org/" target="_blank">IEEE ICC 2020</a></li>
-  <li>09/2019:&nbsp; Joined UCSD as a Postdoctral Scholar at <a href="http://mesdat.ucsd.edu/people" target="_blank"> Mobile System Design Labs </a> in ECE department</li>
-  <li>08/2019:&nbsp; Our Paper on Information Autonomy for UAV is
-accepted in <a href="https://events.afcea.org/MILCOM19" target="_blank">IEEE MILCOM 2019</a></li>
-  <li>08/2019:&nbsp; Successfully defended my PhD dissertation, Computer Science Dept., UC Irvine</li>
-  <li>08/2019:&nbsp; Our paper on Distilled-split Deep Neural Network
-is accepted in ACM Mobicom <a href="https://www.microsoft.com/en-us/research/event/the-1st-workshop-on-hot-topics-in-video-analytics-and-intelligent-edges/#!program" target="_blank">HotEdgeVideo 2019</a></li>
-  <li>07/2019:&nbsp; Received NSF travel grant offer to attend ACM
-<a href="https://conferences.sigcomm.org/sigcomm/2019" target="_blank">SIGCOMM 2019</a> conference</li>
-  <li>06/2019:&nbsp; Our paper on Edge Computing for UAVs has been
-accepted in <a href="https://conferences.sigcomm.org/sigcomm/2019/workshop-magesys.html" target="_blank">IEEE SIGCOMM MAGESys 2019</a></li>
-  <li>05/2019:&nbsp; Presented Collaborative demo with UAV and Edge
-Computing in the STIP workshop at UCSD</li>
-  <li>05/2019:&nbsp; Invited to present <a href="http://saburbaidya.com/images/Poster_AFRL19.pdf" target="_blank"> Poster </a> at 5G SDR Challenge in Air Force Research Laboratory, Dayton, OH</li>
-  <li>10/2018:&nbsp; Presented a poster in the UCI ICS 50th
-Anniversary&nbsp; Celebration at Beckman Center, Irvine, CA</li>
-  <li>07/2018:&nbsp; Our paper FlyNetSim: An Open source UAV Network
-Simulator is accepted in <a href="http://mswimconf.com/2018/" target="_blank">ACM MSWiM 2018</a></li>
-  <li>05/2018:&nbsp; Received two student travel grants for ACM
-SIGMETRICS 2018 and ACM MobiHoc 2018</li>
-  <li>04/2018:&nbsp; Received the <a target="_blank" href="images/AGS_award_sabur.pdf"><span style="font-weight: bold;">People's Choice Award</span></a> in the
-Graduate Research Symposium at UC Irvine [<a href="https://symposium.ags.uci.edu/2018-winners-abstracts/" target="_black">Link</a>]</li>
-  <li>04/2018:&nbsp; Our paper on Robust Multi-Path Communications for
-UAVs has been accepted in <a href="http://secon2018.ieee-secon.org/the-cpc-uav-workshop/" target="_blank">IEEE SECON 2018</a></li>
-  <li>03/2018:&nbsp; Our
-paper has been published in IEEE Transactions on
-Cognitive Communications and Networking (<a href="https://www.comsoc.org/publications/journals/ieee-tccn" target="_blank">TCCN</a>)</li>
-  <li>02/2018:&nbsp; Our paper on eBPF based NFV has been accepted in
-IEEE INFOCOM Workshops (<a rel="me" href="http://infocom2018.ieee-infocom.org/content/workshop-scan-advances-software-defined-and-context%E2%80%90aware-cognitive-networks" target="_blank">INFOCOM SCAN 2018)</a></li>
-  <li>12/2017:&nbsp; Research featured in <a href="https://www.ics.uci.edu/community/news/view_news?id=1263" target="_blank">UCI
-news</a>, <a href="https://dod.defense.gov/News/Blogs-Archive/?Page=26" target="_blank">DoD
-News</a>, <a href="https://www.technology.org/2017/11/22/darpa-puts-techies-to-the-test-at-bay-area-hackfest/" target="_blank">Technology News</a>, and <a href="https://www.pcmag.com/news/357685/inside-darpas-hackfest-at-nasa-research-park" target="_blank">PC Magazine</a></li>
-  <li>11/2017:&nbsp;<small> </small>Our team "DeepEdge" participated
-in <a href="https://darpahackfest.com/" target="_blank">DARPA Hackfest
-2017</a> at NASA Ames Research Center, CA</li>
-  <li>02/2017:&nbsp;<small> </small>Our
-paper on Network selection has been accepted in
-IEEE INFOCOM Workshop (<a href="http://infocom2017.ieee-infocom.org/workshop/scan-advances-software-defined-and-context%E2%80%90aware-cognitive-networks" target="_blank">INFOCOM SCAN 2017)</a></li>
-  <li>09/2016:&nbsp;<small> </small>Our paper on Interference
-management for Video transmission has been accepted in <a href="http://www.conf-icnc.org/2017/" rel="tag" target="_blank">IEEE
-ICNC 2017</a></li>
-  <li>08/2016:<small>&nbsp; </small>Received <a href="images/Poster_award_Huawei.jpg" target="_blank"><span style="font-weight: bold;">Third Best Poster Award</span></a> in
-Intern
-Research Showcase in Huawei Research Labs, Santa Clara, CA</li>
-  <li>07/2016:&nbsp;<small> </small>Our paper on Cognitive
-Interference Control in Urban IoT has been accepted in <a href="http://globecom2016.ieee-globecom.org/" target="_blank">IEEE
-Globecom2016</a></li>
-  <li>06/2016:<small>&nbsp; </small>Joined Huawei Research Lab, Santa
-Clara, CA for Summer 2016 internship</li>
-  <li>06/2016:<small>&nbsp; </small>Received the <a href="images/Poster_award_UCI.jpg" target="_blank"><span style="font-weight: bold;">Best Poster Award</span></a> in UCI
-Computer Science
-Research Showcase [<a href="https://www.cs.uci.edu/event/2016-research-showcase/" target="_blank">Link</a>]</li>
-  <small> </small>
-</ul>
-
-
-
-</div>
-
-
-
-<br>
-<ul>
-</ul>
-</div>
-<div class="selected-publications">
-<p> </p>
-<br>
-<ul>
-  <ul>
-  </ul>
-</ul>
-</div>
-<div class="selected-publications">
-<p> </p>
-<br>
-</div>
-</div>
-
-<div id="footer">
-<div class="clearfix">
-<table width="100%">
-  <tbody>
-    <tr>
-      <td align="right"><a href="http://www.ucsd.edu/"><img src="images/uofl_logo.png" width="200"></a></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-
-
-
-</body></html>
+</body>
+</html>
