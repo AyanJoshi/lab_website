@@ -70,19 +70,19 @@
     <h2 class="section-title">Lab Facilities & Equipment</h2>
     <p class="about-content">AIMS Lab inhabits a large high-bay space at LARRI, optimized for indoor aerial robotic flight and ground vehicle control. High-precision tracking is facilitated by an optical tracking system using 22 OptiTrack cameras that provides over 12,000 cubic feet of test room with millimeter-precision reporting.</p>
     <div class="facilities-grid">
-      <div class="facility-item">
+      <div class="facility-item" onclick="openLightbox('images/aimslab_drones.jpg', 'Indoor fully netted drone flying facility with OptiTrack motion capture system and multiple advanced drones')">
         <img src="images/aimslab_drones.jpg" alt="AIMS Lab Drone Facility">
         <p class="caption">Indoor fully netted drone flying facility with OptiTrack motion capture system and multiple advanced drones</p>
       </div>
-      <div class="facility-item">
+      <div class="facility-item" onclick="openLightbox('images/aimslab_ground_vehicles.jpg', 'Ground robots and autonomous electric vehicle with available infrastructure for indoor experiments')">
         <img src="images/aimslab_ground_vehicles.jpg" alt="AIMS Lab Ground Vehicles">
         <p class="caption">Ground robots and autonomous electric vehicle with available infrastructure for indoor experiments</p>
       </div>
-      <div class="facility-item">
+      <div class="facility-item" onclick="openLightbox('photos/aimslab_robots_sensors.jpg', 'Franka-Emika robotic arm with Haption haptic device, AR/VR sensors, RGBD cameras, and Ouster LiDARs')">
         <img src="photos/aimslab_robots_sensors.jpg" alt="AIMS Lab Robotic Arm">
         <p class="caption">Franka-Emika robotic arm with Haption haptic device, AR/VR sensors, RGBD cameras, and Ouster LiDARs</p>
       </div>
-      <div class="facility-item">
+      <div class="facility-item" onclick="openLightbox('photos/aimslab_comp_com.jpg', 'Computing facility with embedded computing units, Lambda vector server, and Software-Defined Radios for 6G research')">
         <img src="photos/aimslab_comp_com.jpg" alt="AIMS Lab Computing Facility">
         <p class="caption">Computing facility with embedded computing units, Lambda vector server, and Software-Defined Radios for 6G research</p>
       </div>
@@ -174,6 +174,41 @@
   </div>
 </section>
 
+<section id="team-activities">
+  <div class="container">
+    <h2 class="section-title">Team Activities & Events</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="photos/experiences/Darpa_hackfest/team_1.JPG" alt="DARPA Hackfest Team" onclick="openLightbox(this.src, 'AIMS Lab team at DARPA Hackfest')">
+        </div>
+        <div class="carousel-slide">
+          <img src="photos/experiences/Darpa_hackfest/team_2.JPG" alt="DARPA Hackfest" onclick="openLightbox(this.src, 'Team collaboration at DARPA Hackfest')">
+        </div>
+        <div class="carousel-slide">
+          <img src="photos/experiences/Darpa_hackfest/team_3.jpg" alt="Team Work" onclick="openLightbox(this.src, 'Team working together')">
+        </div>
+        <div class="carousel-slide">
+          <img src="photos/hackfest_felicitation.JPG" alt="Hackfest Award" onclick="openLightbox(this.src, 'Team felicitation at DARPA Hackfest')">
+        </div>
+        <div class="carousel-slide">
+          <img src="photos/experiences/conferences/Globecom_2016.jpg" alt="Conference" onclick="openLightbox(this.src, 'Team at IEEE Globecom Conference')">
+        </div>
+        <div class="carousel-slide">
+          <img src="photos/experiences/conferences/Infocom_2018.jpg" alt="Infocom 2018" onclick="openLightbox(this.src, 'Team at IEEE Infocom 2018')">
+        </div>
+      </div>
+      <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+    </div>
+    <div class="carousel-dots">
+      <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+      <span class="carousel-dot" onclick="goToSlide(1)"></span>
+      <span class="carousel-dot" onclick="goToSlide(2)"></span>
+    </div>
+  </div>
+</section>
+
 <section id="news-preview">
   <div class="container">
     <h2 class="section-title">Recent News</h2>
@@ -219,10 +254,80 @@
   </div>
 </footer>
 
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
 <script>
 function toggleNav() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
+
+// Lightbox Functions
+function openLightbox(src, caption) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  const captionEl = document.getElementById('lightbox-caption');
+
+  img.src = src;
+  captionEl.textContent = caption || '';
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(event) {
+  if (event && event.target !== event.currentTarget && !event.target.classList.contains('lightbox-close')) {
+    return;
+  }
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
+
+// Carousel Functions
+let currentSlide = 0;
+const slidesPerView = window.innerWidth <= 640 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+const totalSlides = document.querySelectorAll('.carousel-slide').length;
+const maxSlide = Math.ceil(totalSlides / slidesPerView) - 1;
+
+function moveCarousel(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = maxSlide;
+  if (currentSlide > maxSlide) currentSlide = 0;
+  updateCarousel();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateCarousel();
+}
+
+function updateCarousel() {
+  const track = document.querySelector('.carousel-track');
+  const slideWidth = document.querySelector('.carousel-slide').offsetWidth + 20; // Include gap
+  track.style.transform = `translateX(-${currentSlide * slideWidth * slidesPerView}px)`;
+
+  // Update dots
+  document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentSlide);
+  });
+}
+
+// Auto-advance carousel
+setInterval(() => moveCarousel(1), 5000);
+
+// Update on resize
+window.addEventListener('resize', updateCarousel);
 </script>
 
 </body>
