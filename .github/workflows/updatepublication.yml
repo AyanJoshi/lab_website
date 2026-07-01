@@ -49,6 +49,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add publication.html aimslab.html
+          git add publications.html
           git commit -m "Auto-update publications from Google Scholar [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push

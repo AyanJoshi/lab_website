@@ -205,6 +205,64 @@ def scrape_scholar_with_scholarly(author_name):
         
     return publications
 
+def update_publications_page(publications, html_file_path="publications.html"):
+    """Regenerate the year-grouped publication list in the live publications.html page."""
+    import html as html_escape
+
+    start_marker = "<!-- AUTO_PUBLICATIONS_START -->"
+    end_marker = "<!-- AUTO_PUBLICATIONS_END -->"
+
+    with open(html_file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    start_idx = content.find(start_marker)
+    end_idx = content.find(end_marker)
+    if start_idx == -1 or end_idx == -1:
+        print(f"Could not find AUTO_PUBLICATIONS markers in {html_file_path}")
+        return False
+
+    # Group publications by year, descending
+    by_year = {}
+    for pub in publications:
+        year = pub.get('year', 'N/A') or 'N/A'
+        by_year.setdefault(year, []).append(pub)
+
+    def sort_key(y):
+        try:
+            return int(y)
+        except (ValueError, TypeError):
+            return -1
+
+    years = sorted(by_year.keys(), key=sort_key, reverse=True)
+
+    blocks = [start_marker]
+    for year in years:
+        blocks.append(f'<h2 style="color: var(--primary); margin: 40px 0 20px;">{html_escape.escape(str(year))}</h2>')
+        blocks.append('<ul class="publications-list">')
+        for pub in by_year[year]:
+            title = html_escape.escape(pub.get('title', ''))
+            authors = html_escape.escape(pub.get('authors', ''))
+            venue = html_escape.escape(pub.get('venue', ''))
+            url = pub.get('url', '') or 'https://scholar.google.com/citations?user=UY1UAKUAAAAJ&hl=en'
+            blocks.append('  <li>')
+            blocks.append(f'    <p class="pub-title">{title}</p>')
+            blocks.append(f'    <p class="pub-authors">{authors}</p>')
+            blocks.append(f'    <p class="pub-venue">{venue}</p>')
+            blocks.append(f'    <p class="pub-links"><a href="{url}" target="_blank">[PDF]</a></p>')
+            blocks.append('  </li>')
+        blocks.append('</ul>')
+    blocks.append(end_marker)
+
+    new_section = '\n    '.join(blocks)
+    new_content = content[:start_idx] + new_section + content[end_idx + len(end_marker):]
+
+    with open(html_file_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+
+    print(f"Successfully updated {html_file_path} with {len(publications)} publications across {len(years)} years")
+    return True
+
+
 def update_html_file(publications, html_file_path):
     """Update the HTML file with new publications"""
     try:
@@ -385,14 +443,13 @@ def main():
     for i, pub in enumerate(publications[:3], 1):
         print(f"{i}. {pub['title'][:60]}... ({pub['year']})")
     
-    # Update both HTML files
-    success1 = update_html_file(publications, "publication.html")
-    success2 = update_html_file(publications[:3], "aimslab.html")  # Only update with 3 most recent publications
-    
-    if success1 and success2:
-        print("Publications updated successfully in both files!")
+    # Update the live publications page (grouped by year)
+    success = update_publications_page(publications, "publications.html")
+
+    if success:
+        print("Publications updated successfully!")
     else:
-        print("Failed to update one or both files")
+        print("Failed to update publications.html")
         exit(1)
 
 if __name__ == '__main__':
